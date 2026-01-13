@@ -211,7 +211,7 @@
 										d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
 								</svg>
 							</div>
-							<span class="text-gray-900 font-bold tracking-wider">253-123-0000</span>
+							<span class="text-gray-900 font-bold tracking-wider">000-123-4567</span>
 						</div>					
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                         <div class="grid md:grid-cols-2 gap-5">
                             <div>
                                 <label class="block text-xs font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Full Name</label>
-                                <input type="text" name="from_name" required placeholder="John Doe" class="w-full px-6 py-4 rounded-2xl border border-gray-200 outline-none bg-white focus:ring-2 focus:ring-brand transition">
+                                <input type="text" name="from_name" required placeholder="Name" class="w-full px-6 py-4 rounded-2xl border border-gray-200 outline-none bg-white focus:ring-2 focus:ring-brand transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Phone (Optional)</label>
@@ -230,7 +230,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Email Address</label>
-                            <input type="email" name="reply_to" required placeholder="johnDoe@email.com" class="w-full px-6 py-4 rounded-2xl border border-gray-200 outline-none bg-white focus:ring-2 focus:ring-brand transition">
+                            <input type="email" name="reply_to" required placeholder="" class="w-full px-6 py-4 rounded-2xl border border-gray-200 outline-none bg-white focus:ring-2 focus:ring-brand transition">
                         </div>
                         <div>
                             <label class="block text-xs font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Subject</label>
@@ -256,18 +256,18 @@
     <script>
         AOS.init({ duration: 1200, once: true, disable: window.innerWidth < 768 });
 
-        // 비디오 재생 지연 및 페이드 인 스크립트
+        // 
         const video = document.getElementById('hero-video');
         video.addEventListener('ended', function() {
-            // 재생 종료 시 비디오를 서서히 어둡게 (투명도 조절)
+            // 
             video.style.opacity = '0';
             
             setTimeout(function() {
-                video.currentTime = 0; // 영상 처음으로 되돌리기
+                video.currentTime = 0; // 
                 video.play();
-                // 다시 재생 시작 시 서서히 밝게
+                // 
                 video.style.opacity = '1';
-            }, 4000); // 4초 대기
+            }, 4000); // 
         });
 
         const btn = document.getElementById('submit-btn');
@@ -288,4 +288,5 @@
         });
     </script>
 </body>
+
 </html>
