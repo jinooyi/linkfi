@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (GA4) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G12W1KKXP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-8G12W1KKXP');
     </script>
@@ -19,10 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function () {
+        (function() {
             emailjs.init("SsTDFaMqY83-c2am6");
         })();
     </script>
@@ -45,47 +44,103 @@
 
 <body>
 
-<!-- ===== CONTACT SECTION ===== -->
+<!-- ================= NAV ================= -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div>
+            <span class="text-2xl font-black uppercase">Link<span class="text-brand">Fi</span></span>
+            <div class="text-[9px] text-gray-400 tracking-widest font-bold">NETWORK SOLUTIONS</div>
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-bold uppercase">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="btn-quote px-6 py-2.5 rounded-full text-white">Free Quote</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="pt-32 pb-20 bg-white">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6">
+        <video id="hero-video" autoplay muted playsinline class="rounded-[2.5rem] shadow-xl">
+            <source src="pic/front.mp4" type="video/mp4">
+        </video>
+        <div>
+            <h1 class="text-5xl font-black leading-tight">
+                Seamless <span class="text-brand">Connectivity</span><br>Real Growth
+            </h1>
+            <p class="mt-6 text-gray-500 max-w-md">
+                Big Tech expertise delivered locally for Seattle–Tacoma businesses.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+        <img src="pic/logo.png" class="rounded-[2rem] shadow-xl">
+        <div>
+            <h2 class="uppercase text-brand text-xs tracking-widest font-black">About Us</h2>
+            <h3 class="text-4xl font-black mt-4">Proven Expertise. Optimized Costs.</h3>
+            <p class="mt-6 text-gray-600">
+                Based in Seattle–Tacoma, LinkFi Network delivers enterprise-grade WiFi
+                solutions backed by 10+ years of Big Tech experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-black mb-12">Our Expertise</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="hotel.html" class="service-card">Hotel WiFi Solution</a>
+            <a href="smallbiz.html" class="service-card">Small Business WiFi</a>
+            <a href="office.html" class="service-card">Office Network</a>
+            <a href="247.html" class="service-card">Diagnostics & Repair</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
 <section id="contact" class="py-24 bg-white">
     <div class="max-w-xl mx-auto px-6">
-
         <form id="contact-form" class="space-y-5 bg-gray-50 p-8 rounded-3xl shadow-xl">
 
-            <input type="text" name="from_name" required
-                   placeholder="Full Name"
+            <input type="text" name="from_name" required placeholder="Full Name"
                    class="w-full px-6 py-4 rounded-2xl border">
 
-            <input type="email" name="reply_to" required
-                   placeholder="Email Address"
+            <input type="email" name="reply_to" required placeholder="Email Address"
                    class="w-full px-6 py-4 rounded-2xl border">
 
-            <input type="text" name="title" required
-                   placeholder="Subject"
+            <input type="text" name="title" required placeholder="Subject"
                    class="w-full px-6 py-4 rounded-2xl border">
 
-            <textarea name="message" rows="4" required
-                      placeholder="Message"
+            <textarea name="message" rows="4" required placeholder="Project details..."
                       class="w-full px-6 py-4 rounded-2xl border"></textarea>
 
             <button type="submit" id="submit-btn"
-                    class="w-full py-5 bg-[#2d5a8e] text-white font-black rounded-2xl uppercase tracking-widest">
+                    class="w-full py-5 btn-brand text-white font-black rounded-2xl uppercase tracking-widest">
                 Send Request
             </button>
 
-            <!-- ✅ Success / Error Messages -->
-            <p id="success-msg"
-               class="hidden mt-4 text-green-600 text-sm font-bold text-center">
+            <!-- ✅ ADDED -->
+            <p id="success-msg" class="hidden text-green-600 font-bold text-center mt-4">
                 ✔ Your request has been sent successfully.
             </p>
-
-            <p id="error-msg"
-               class="hidden mt-4 text-red-600 text-sm font-bold text-center">
+            <p id="error-msg" class="hidden text-red-600 font-bold text-center mt-4">
                 ❌ Something went wrong. Please try again.
             </p>
 
         </form>
     </div>
 </section>
+
+<footer class="py-16 text-center border-t">
+    © 2026 LINKFI NETWORK SOLUTIONS
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -96,40 +151,29 @@
     const successMsg = document.getElementById('success-msg');
     const errorMsg = document.getElementById('error-msg');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
         btn.innerText = 'Sending...';
         successMsg.classList.add('hidden');
         errorMsg.classList.add('hidden');
 
-        const serviceID = 'default_service';
-        const templateID = 'template_jcbee9c';
+        emailjs.sendForm('default_service', 'template_jcbee9c', this)
+        .then(() => {
 
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-
-                // ✅ GA4 전환 이벤트 (성공 시에만)
-                gtag('event', 'submit_form', {
-                    event_category: 'lead',
-                    event_label: 'contact_form'
-                });
-
-                btn.innerText = 'Send Request';
-                successMsg.classList.remove('hidden');
-                this.reset();
-
-                // 선택: 5초 후 메시지 숨김
-                setTimeout(() => {
-                    successMsg.classList.add('hidden');
-                }, 5000);
-
-            }, () => {
-
-                btn.innerText = 'Send Request';
-                errorMsg.classList.remove('hidden');
-
+            // ✅ ADDED: GA4 conversion
+            gtag('event', 'submit_form', {
+                event_category: 'lead',
+                event_label: 'contact_form'
             });
+
+            btn.innerText = 'Send Request';
+            successMsg.classList.remove('hidden');
+            this.reset();
+
+        }, () => {
+            btn.innerText = 'Send Request';
+            errorMsg.classList.remove('hidden');
+        });
     });
 </script>
 
