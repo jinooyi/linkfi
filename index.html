@@ -10,11 +10,11 @@
         gtag('config', 'G-8G12W1KKXP');
     </script>
 
+    <link rel="icon" type="image/png" href="pic/favicon.ico" sizes="any">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>LinkFi | Network Solutions</title>
 
-    <link rel="icon" type="image/png" href="pic/favicon.ico" sizes="any">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -26,12 +26,29 @@
             emailjs.init("SsTDFaMqY83-c2am6");
         })();
     </script>
+
+    <style>
+        :root {
+            --brand-blue: #2d5a8e;
+            --accent-green: #000222;
+            --quote-btn: #334155;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        input, textarea { font-size: 16px !important; }
+    </style>
 </head>
 
-<body class="bg-white font-[Inter]">
+<body>
 
-<section id="contact" class="py-24">
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="py-24 bg-white">
     <div class="max-w-xl mx-auto px-6">
+
         <form id="contact-form" class="space-y-5 bg-gray-50 p-8 rounded-3xl shadow-xl">
 
             <input type="text" name="from_name" required
@@ -51,7 +68,7 @@
                       class="w-full px-6 py-4 rounded-2xl border"></textarea>
 
             <button type="submit" id="submit-btn"
-                    class="w-full py-5 bg-blue-700 text-white font-black rounded-2xl uppercase tracking-widest">
+                    class="w-full py-5 bg-[#2d5a8e] text-white font-black rounded-2xl uppercase tracking-widest">
                 Send Request
             </button>
 
@@ -107,7 +124,7 @@
                     successMsg.classList.add('hidden');
                 }, 5000);
 
-            }, (err) => {
+            }, () => {
 
                 btn.innerText = 'Send Request';
                 errorMsg.classList.remove('hidden');
